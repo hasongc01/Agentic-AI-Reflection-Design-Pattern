@@ -31,7 +31,7 @@ Reflect on the output: Evaluate both the code and the chart using an LLM to dete
 
 Generate and execute improved version (V2): Produce a refined version of the plotting code based on reflection insights and render the enhanced chart.
 
-🧩 LLM Model Used: gpt-4o-mini
+## 🧩 LLM Model Used: gpt-4o-mini
 
 This project uses OpenAI’s gpt-4o-mini, a lightweight variant of the GPT-4-Omni architecture designed for multi-modal reasoning across text, code, and visual inputs.
 
