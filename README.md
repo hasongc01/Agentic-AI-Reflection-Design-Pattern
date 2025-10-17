@@ -16,35 +16,7 @@ The repo includes three independent examples:
 Each subproject showcases how a multi-step agentic workflow can be implemented using OpenAI GPT models to perform generation → reflection → revision cycles.
 
 
-# 🧩 Folder Structure
-
-Reflection_Design_Pattern/
-├── Chart_Generation/
-│   ├── agent_chart_generation.ipynb
-│   ├── utils.py
-│   └── README.md
-│
-├── SQL_Generation/
-│   ├── sql_generation.ipynb
-│   ├── utils.py
-│   └── README.md
-│
-├── Research_Agent/
-│   ├── research_agent.ipynb
-│   ├── myutils.py
-│   └── README.md
-│
-└── README.md   ← (this file)
-
-Each folder includes:
-
-README.md — workflow explanation and example use cases
-
-utils.py — helper functions for visualization or display
-
-Notebook (.ipynb) — runnable notebook demonstrating the full agentic workflow
-
-# 🧠 What is the Reflection Design Pattern?
+## 🧠 What is the Reflection Design Pattern?
 
 The Reflection Design Pattern structures an AI agent’s workflow into iterative reasoning loops:
 
@@ -56,7 +28,8 @@ The Reflection Design Pattern structures an AI agent’s workflow into iterative
 
 This approach enables an LLM to act like a self-improving system, emulating human cognition — draft → critique → rewrite.
 
-# 🧭 Workflows
+## 🧭 Workflows
+
 1. 📊 Chart Generation Workflow
 
 Goal: Automatically generate insightful visualizations from text-based instructions or data descriptions.
@@ -86,7 +59,18 @@ Goal: Write critical essays or reports through a self-reflective writing process
 - Step 3: Revise essay for clarity, coherence, and argumentation strength
 
 
-# 💡 Use Cases
+## 🧩 Folder Structure
+
+Each folder includes:
+
+- README.md — workflow explanation and example use cases
+
+- utils.py — helper functions for visualization or display
+
+- Notebook (.ipynb) — runnable notebook demonstrating the full agentic workflow
+
+
+## 💡 Use Cases
 
 - Data Science Automation: Self-correcting pipelines for charting, querying, and reporting
 
