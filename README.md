@@ -1,74 +1,97 @@
-# Multi-Modal Agentic Workflow of Chart Generation using Reflection Pattern
+# 🧠 Agentic AI – Reflection Design Pattern
 
-## 🧠 Project Overview
-This project explores a multi-modal agentic workflow for automated chart generation, integrating text, code, and visual reasoning. The workflow leverages an agentic AI architecture with a reflection pattern, enabling the model to iteratively critique and refine its own chart outputs based on data semantics and visual feedback.
+## 🚀 Project Overview
 
-Through this reflection loop, the agent autonomously:
+This repository demonstrates how Agentic AI workflows can simulate human-like reflection, reasoning, and improvement across different domains.
+Each workflow follows the Reflection Design Pattern, where an agent iteratively generates, evaluates, and refines its outputs to improve performance and quality.
 
-- Interprets natural-language analytical queries.
+The repo includes three independent examples:
 
-- Generates data-driven Python code (e.g., using matplotlib or plotly) to visualize insights.
+- Chart Generation
 
-- Evaluates the fidelity, interpretability, and aesthetics of the resulting chart.
+- SQL Generation
 
-- Refines the visualization iteratively until alignment with the intended analytical goal is achieved.
+- Research Agent (Essay Writing)
 
-The result is a closed-loop, self-improving chart generation system that mimics how human analysts explore, test, and polish visual insights — but in an automated, multi-modal way.
+Each subproject showcases how a multi-step agentic workflow can be implemented using OpenAI GPT models to perform generation → reflection → revision cycles.
 
-The notebook replicates an exercise from Deeplearning.AI’s “Agentic AI” course, adapted to use a different dataset. Majority of the code in this notebook is from the “Agentic AI” course.
 
-All supporting functionality — such as prompt handling, visualization generation, and model interaction — is implemented through a custom utils.py module that emulates the original course utilities.
+# 🧩 Folder Structure
 
-## Multimodal LLM
-A multi-modal LLM is a system that can take and generate outputs beyond text (image, audio, video). The LLM will review the first draft chart, identify potential improvements—such as chart type, labels, or color choices—and then rewrite the chart generation code to produce a more effective visualization.
+Reflection_Design_Pattern/
+├── Chart_Generation/
+│   ├── agent_chart_generation.ipynb
+│   ├── utils.py
+│   └── README.md
+│
+├── SQL_Generation/
+│   ├── sql_generation.ipynb
+│   ├── utils.py
+│   └── README.md
+│
+├── Research_Agent/
+│   ├── research_agent.ipynb
+│   ├── myutils.py
+│   └── README.md
+│
+└── README.md   ← (this file)
 
-## Agentic Workflow
-Generate an initial version (V1): Use a Large Language Model (LLM) to create the first version of the plotting code.
+Each folder includes:
 
-Execute code and create chart: Run the generated code and display the resulting chart.
+README.md — workflow explanation and example use cases
 
-Reflect on the output: Evaluate both the code and the chart using an LLM to detect areas for improvement (ex. clarity, accuracy, design).
+utils.py — helper functions for visualization or display
 
-Generate and execute improved version (V2): Produce a refined version of the plotting code based on reflection insights and render the enhanced chart.
+Notebook (.ipynb) — runnable notebook demonstrating the full agentic workflow
 
-## 🧩 LLM Model Used: gpt-4o-mini
+# 🧠 What is the Reflection Design Pattern?
 
-This project uses OpenAI’s gpt-4o-mini, a lightweight variant of the GPT-4-Omni architecture designed for multi-modal reasoning across text, code, and visual inputs.
+The Reflection Design Pattern structures an AI agent’s workflow into iterative reasoning loops:
 
-Despite its smaller footprint, gpt-4o-mini retains GPT-4-level reasoning quality while offering lower latency, faster inference, and cost efficiency, making it ideal for iterative agentic workflows such as reflection-based chart generation.
+- Generate: Create an initial output (e.g., draft, chart, SQL query).
 
-Key features:
+- Reflect: Critically analyze the output to find weaknesses or improvement points.
 
-💬 Multi-modal comprehension: Understands and generates text, code, and structured data simultaneously.
+- Revise: Apply the feedback to produce an improved version.
 
-🎨 Visual reasoning: Interprets chart outputs and refines visual parameters based on feedback.
+This approach enables an LLM to act like a self-improving system, emulating human cognition — draft → critique → rewrite.
 
-⚙️ Lightweight & responsive: Optimized for rapid reasoning loops in autonomous or self-reflective agents.
+# 🧭 Workflows
+1. 📊 Chart Generation Workflow
 
-🧠 Reflection-friendly architecture: Suited for tasks requiring critique–revise–re-evaluate cycles.
+Goal: Automatically generate insightful visualizations from text-based instructions or data descriptions.
 
-In this workflow, gpt-4o-mini acts as both:
+- Generates charts using reflection cycles (draft → critique → regenerate).
 
-The reasoning engine — generating and explaining chart code from natural-language prompts.
+- Example: “Visualize weekly sales trends with annotations for promotion weeks.”
 
-The reflective evaluator — reviewing the generated visualization, diagnosing issues (ex. mislabeled axes, cluttered design), and iteratively improving the output.
+2. 🧮 Text-to-SQL Generation Workflow
 
-## ⚙️ Core Components
+Goal: Convert natural language questions into optimized SQL queries using reflection-based reasoning.
 
-- Agentic Orchestration: Modular LLM-based agents for planning, visualization, reflection, and improvement.
+- Step 1: Draft SQL query
 
-- Reflection Pattern: Structured feedback cycle comparing expected vs. generated visual output.
+- Step 2: Critique SQL correctness and completeness
 
-- Multi-Modal Reasoning: Joint understanding of textual intent, tabular data, and visual output.
+- Step 3: Refine query for better accuracy and performance
 
-- Evaluation Metrics: Considers chart accuracy, readability, and semantic alignment.
+3. ✍️ Research Agent Workflow
 
-## 🚀 Use Cases
+Goal: Write critical essays or reports through a self-reflective writing process.
 
-- Automated EDA (Exploratory Data Analysis) visualization.
+- Step 1: Draft essay
 
-- Generating publication-ready charts from natural language prompts.
+- Step 2: Reflect and provide feedback
 
-- Teaching and evaluating visual reasoning in LLMs.
+- Step 3: Revise essay for clarity, coherence, and argumentation strength
 
-- Integrating self-correcting AI into business analytics workflows.
+
+# 💡 Use Cases
+
+- Data Science Automation: Self-correcting pipelines for charting, querying, and reporting
+
+- AI Research: Studying reflection and self-improvement in large language models
+
+- Education: Teaching how agentic AI systems emulate human reasoning cycles
+
+- Productivity Tools: Auto-writing, analysis, or visualization assistants
